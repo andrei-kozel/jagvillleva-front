@@ -10,18 +10,18 @@ export const Navigation = ({ logo }) => {
   };
 
   return (
-    <div className="fixed w-screen opacity-80 bg-yellow-100 p-3">
+    <div className="fixed w-screen opacity-95 bg-yellow-100 p-3 z-50">
       <div className="max-w-[1280px] m-auto">
         <nav className="flex items-center flex-wrap">
           <Link href="/">
             <a className="inline-flex items-center p-2 mr-4 ">
-              <span className="text-xl text-slate-700 font-bold uppercase tracking-wide">
+              <span className="text-xl text-zinc-700 font-bold uppercase tracking-wide">
                 JagVillLeva
               </span>
             </a>
           </Link>
           <button
-            className=" inline-flex p-3 hover:bg-yellow-600 rounded lg:hidden text-slate-700 ml-auto hover:text-white outline-none"
+            className=" inline-flex p-3 hover:bg-yellow-700 rounded lg:hidden text-zinc-700 ml-auto hover:text-white outline-none"
             onClick={handleClick}
           >
             <svg
@@ -47,23 +47,43 @@ export const Navigation = ({ logo }) => {
           >
             <div className="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto">
               <Link href="/">
-                <a className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-slate-700 font-bold items-center justify-center hover:bg-yellow-600 hover:text-white ">
-                  Home
+                <a className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-zinc-700 font-bold items-center justify-center hover:bg-yellow-700 hover:text-white ">
+                  Hem
+                </a>
+              </Link>
+              <Link href="/rules">
+                <a className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-zinc-700 font-bold items-center justify-center hover:bg-yellow-700 hover:text-white">
+                  Adoptionsregler
+                </a>
+              </Link>
+              <Link href="/dogs">
+                <a className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-zinc-700 font-bold items-center justify-center hover:bg-yellow-700 hover:text-white">
+                  Hundar
+                </a>
+              </Link>
+              <Link href="/news">
+                <a className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-zinc-700 font-bold items-center justify-center hover:bg-yellow-700 hover:text-white">
+                  Nyheter
                 </a>
               </Link>
               <Link href="/">
-                <a className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-slate-700 font-bold items-center justify-center hover:bg-yellow-600 hover:text-white">
-                  Services
+                <a className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-zinc-700 font-bold items-center justify-center hover:bg-yellow-700 hover:text-white">
+                  Kontakt
                 </a>
               </Link>
-              <Link href="/">
-                <a className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-slate-700 font-bold items-center justify-center hover:bg-yellow-600 hover:text-white">
-                  About us
+              <Link href="/help">
+                <a className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-zinc-700 font-bold items-center justify-center hover:bg-yellow-700 hover:text-white">
+                  Hjälp oss
                 </a>
               </Link>
-              <Link href="/">
-                <a className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-slate-700 font-bold items-center justify-center hover:bg-yellow-600 hover:text-white">
-                  Contact us
+              <Link href="/about">
+                <a className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-zinc-700 font-bold items-center justify-center hover:bg-yellow-700 hover:text-white">
+                  Om oss
+                </a>
+              </Link>
+              <Link href="/blog">
+                <a className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-zinc-700 font-bold items-center justify-center hover:bg-yellow-700 hover:text-white">
+                  Blogg
                 </a>
               </Link>
             </div>

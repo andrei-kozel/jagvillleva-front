@@ -1,6 +1,6 @@
 import { fetchAPI } from "@/lib/api";
-import { BackgroundImage } from "@/components/Homepage/BackgroundImage";
-import Link from "next/link";
+import { BackgroundImage } from "@/components/BackgroundImage";
+import Button from "@/components/Button";
 
 export default function Home({ homepage, dogs }) {
   return (
@@ -8,20 +8,40 @@ export default function Home({ homepage, dogs }) {
       <BackgroundImage
         src={homepage.data.attributes.BackgroundImage.data.attributes.url}
       >
-        <div className="backdrop-blur-sm bg-white/20 p-6 rounded-lg flex flex-col items-end">
-          <h1 className="text-3xl font-extrabold text-zinc-800">
-            TILLSAMMANS KAN
-          </h1>
-          <h1 className="text-3xl font-extrabold text-zinc-800">
+        <div className="backdrop-blur-sm bg-black/20 md:bg-black/10 p-6 rounded-lg flex flex-col justify-center items-center xl:items-end h-screen md:h-fit ">
+          <h1 className="text-3xl font-bold text-gray-200 ">TILLSAMMANS KAN</h1>
+          <h1 className="text-3xl font-bold text-gray-200">
             VI RÄDDA MÅNGA HUNDLIV
           </h1>
-          <Link href="/">
-            <p className="mt-3 py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 cursor-pointer text-center w-fit ">
-              Show more
-            </p>
-          </Link>
+          <Button path="/" color="">
+            Mer information
+          </Button>
         </div>
       </BackgroundImage>
+      <div className="bg-amber-200 md:p-20 flex justify-center">
+        <div className="md:w-1/2 text-center w-full px-4 py-16">
+          <p className="text-3xl font-bold mb-2 text-cyan-800">
+            VI SOM ÄLSKAR OCH HJÄLPER HUNDAR
+          </p>
+          <p className="text-2xl font-bold mb-4 text-cyan-800">
+            HJÄLPER DJUR ATT FÅ NYA HEM
+          </p>
+          <p className="mb-4 text-gray-700">
+            Syftet med denna grupp är att rädda så många hund liv som möjligt.
+            Hundar som letar efter ett nytt hem befinner sig i Ryssland under
+            inhumana levnadsförhållanden. Hundar som vi räddar är inte enbart
+            hemlösa utan dem är hundar som inte har en chans att klara sig
+            vidare i livet. För dessa hundar tickar klockan snart slut, de går
+            mot en säker död. Alla hundarna behöver komma till en familj som kan
+            ge dom ett hem för livet och där dom får oändligt med kärlek livet
+            ut! Vi tjänar absolut inga pengar på de hundars liv, utan tvärtom,
+            vi lägger pengar på att rädda dom. Vi har hjälpt hundar under lång
+            tid och har erfarenhet och rekommendationer. Alla kan få referens
+            från någon av ägarna som har adapterad hund via oss!
+          </p>
+          <p className="text-2xl">TILSAMMANS KAN VI RÄDDA MÅNGA HUNDLIV!</p>
+        </div>
+      </div>
     </>
   );
 }
