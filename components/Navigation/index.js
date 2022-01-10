@@ -1,7 +1,6 @@
 /*  ./components/Navbar.jsx     */
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
-import { useState } from "react";
 
 export const Navigation = ({ logo }) => {
   const [active, setActive] = useState(false);
@@ -35,7 +34,7 @@ export const Navigation = ({ logo }) => {
   return (
     <div
       className={`fixed w-screen bg-transparent p-3 z-50 ${
-        active ? "bg-white text-gray-800" : null
+        active ? "bg-white" : null
       } `}
       style={
         active
@@ -51,17 +50,21 @@ export const Navigation = ({ logo }) => {
           <Link href="/">
             <a className="inline-flex items-center p-2 mr-4">
               <span
-                className={`text-lg md:text-xl text-white font-bold uppercase tracking-wide hover:underline underline-offset-2 decoration-2 ${
-                  active ? "text-gray-800" : null
-                } ${backgroundTransparacy != 0 ? "text-gray-800" : null}`}
+                className={`text-lg md:text-xl font-bold uppercase tracking-wide hover:underline underline-offset-2 decoration-2 ${
+                  active || backgroundTransparacy != 0
+                    ? "text-gray-800"
+                    : "text-white"
+                }`}
               >
                 JagVillLeva
               </span>
             </a>
           </Link>
           <button
-            className={`inline-flex p-3 hover:bg-white rounded lg:hidden text-white ml-auto hover:text-gray-800 outline-none ${
-              backgroundTransparacy != 0 ? "text-gray-800" : null
+            className={`inline-flex p-3 hover:bg-white rounded lg:hidden ml-auto hover:text-gray-800 outline-none ${
+              active || backgroundTransparacy != 0
+                ? "text-gray-800"
+                : "text-white"
             }`}
             onClick={handleClick}
           >
@@ -89,72 +92,88 @@ export const Navigation = ({ logo }) => {
             <div className="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start flex flex-col lg:h-auto">
               <Link href="/">
                 <a
-                  className={`lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white items-center justify-center hover:underline underline-offset-4 decoration-1 font-light  ${
-                    active ? "text-gray-800" : null
-                  } ${backgroundTransparacy != 0 ? "text-gray-800" : null}`}
+                  className={`lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:underline underline-offset-4 decoration-1 font-light  ${
+                    active || backgroundTransparacy != 0
+                      ? "text-gray-800"
+                      : "text-white"
+                  }`}
                 >
                   Hem
                 </a>
               </Link>
               <Link href="/rules">
                 <a
-                  className={`lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white items-center justify-center hover:underline underline-offset-4 decoration-1 font-light  ${
-                    active ? "text-gray-800" : null
-                  } ${backgroundTransparacy != 0 ? "text-gray-800" : null}`}
+                  className={`lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:underline underline-offset-4 decoration-1 font-light  ${
+                    active || backgroundTransparacy != 0
+                      ? "text-gray-800"
+                      : "text-white"
+                  }`}
                 >
                   Adoptionsregler
                 </a>
               </Link>
               <Link href="/dogs">
                 <a
-                  className={`lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white items-center justify-center hover:underline underline-offset-4 decoration-1 font-light  ${
-                    active ? "text-gray-800" : null
-                  } ${backgroundTransparacy != 0 ? "text-gray-800" : null}`}
+                  className={`lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:underline underline-offset-4 decoration-1 font-light  ${
+                    active || backgroundTransparacy != 0
+                      ? "text-gray-800"
+                      : "text-white"
+                  }`}
                 >
                   Hundar
                 </a>
               </Link>
               <Link href="/news">
                 <a
-                  className={`lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white items-center justify-center hover:underline underline-offset-4 decoration-1 font-light  ${
-                    active ? "text-gray-800" : null
-                  } ${backgroundTransparacy != 0 ? "text-gray-800" : null}`}
+                  className={`lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:underline underline-offset-4 decoration-1 font-light  ${
+                    active || backgroundTransparacy != 0
+                      ? "text-gray-800"
+                      : "text-white"
+                  }`}
                 >
                   Nyheter
                 </a>
               </Link>
               <Link href="/">
                 <a
-                  className={`lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white items-center justify-center hover:underline underline-offset-4 decoration-1 font-light  ${
-                    active ? "text-gray-800" : null
-                  } ${backgroundTransparacy != 0 ? "text-gray-800" : null}`}
+                  className={`lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:underline underline-offset-4 decoration-1 font-light  ${
+                    active || backgroundTransparacy != 0
+                      ? "text-gray-800"
+                      : "text-white"
+                  }`}
                 >
                   Kontakt
                 </a>
               </Link>
               <Link href="/help">
                 <a
-                  className={`lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white items-center justify-center hover:underline underline-offset-4 decoration-1 font-light  ${
-                    active ? "text-gray-800" : null
-                  } ${backgroundTransparacy != 0 ? "text-gray-800" : null}`}
+                  className={`lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:underline underline-offset-4 decoration-1 font-light  ${
+                    active || backgroundTransparacy != 0
+                      ? "text-gray-800"
+                      : "text-white"
+                  }`}
                 >
                   Hjälp oss
                 </a>
               </Link>
               <Link href="/about">
                 <a
-                  className={`lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white items-center justify-center hover:underline underline-offset-4 decoration-1 font-light  ${
-                    active ? "text-gray-800" : null
-                  } ${backgroundTransparacy != 0 ? "text-gray-800" : null}`}
+                  className={`lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:underline underline-offset-4 decoration-1 font-light  ${
+                    active || backgroundTransparacy != 0
+                      ? "text-gray-800"
+                      : "text-white"
+                  }`}
                 >
                   Om oss
                 </a>
               </Link>
               <Link href="/blog">
                 <a
-                  className={`lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white items-center justify-center hover:underline underline-offset-4 decoration-1 font-light  ${
-                    active ? "text-gray-800" : null
-                  } ${backgroundTransparacy != 0 ? "text-gray-800" : null}`}
+                  className={`lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:underline underline-offset-4 decoration-1 font-light  ${
+                    active || backgroundTransparacy != 0
+                      ? "text-gray-800"
+                      : "text-white"
+                  }`}
                 >
                   Blogg
                 </a>

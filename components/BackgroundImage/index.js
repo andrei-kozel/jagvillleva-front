@@ -2,10 +2,10 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 
 export const BackgroundImage = ({ src, children }) => {
-  const [clientWindowWidth, setClientWindowWidth] = useState(0);
+  const [clientWindowWidth, setWindowWidth] = useState(0);
 
   useEffect(() => {
-    setClientWindowWidth(window.innerWidth);
+    setWindowWidth(window.innerWidth);
   }, []);
 
   return (
