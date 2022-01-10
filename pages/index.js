@@ -5,12 +5,12 @@ import Button from "@/components/Button";
 export default function Home({ homepage, dogs }) {
   return (
     <>
-      <BackgroundImage
-        src={homepage.data.attributes.BackgroundImage.data.attributes.url}
-      >
-        <div className="backdrop-blur-sm bg-black/20 md:bg-black/10 p-6 rounded-lg flex flex-col justify-center items-center xl:items-end h-screen md:h-fit ">
-          <h1 className="text-3xl font-bold text-gray-200 ">TILLSAMMANS KAN</h1>
-          <h1 className="text-3xl font-bold text-gray-200">
+      <BackgroundImage src={homepage.data.attributes}>
+        <div className="flex flex-col justify-center items-center md:items-start h-screen md:h-fit ">
+          <h1 className="text-xl md:text-3xl font-bold text-gray-200">
+            TILLSAMMANS KAN
+          </h1>
+          <h1 className="text-xl md:text-3xl font-bold text-gray-200 mb-4">
             VI RÄDDA MÅNGA HUNDLIV
           </h1>
           <Button path="/" color="">
@@ -18,12 +18,12 @@ export default function Home({ homepage, dogs }) {
           </Button>
         </div>
       </BackgroundImage>
-      <div className="bg-amber-200 md:p-20 flex justify-center">
+      <div className="md:p-20 flex justify-center">
         <div className="md:w-1/2 text-center w-full px-4 py-16">
-          <p className="text-3xl font-bold mb-2 text-cyan-800">
+          <p className="text-3xl font-bold mb-2 text-gray-800">
             VI SOM ÄLSKAR OCH HJÄLPER HUNDAR
           </p>
-          <p className="text-2xl font-bold mb-4 text-cyan-800">
+          <p className="text-2xl font-bold mb-4 text-gray-800">
             HJÄLPER DJUR ATT FÅ NYA HEM
           </p>
           <p className="mb-4 text-gray-700">
