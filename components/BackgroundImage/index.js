@@ -19,7 +19,6 @@ export const BackgroundImage = ({ src, children }) => {
               : src.BackgroundImage.data.attributes.url
           }
           layout="fill"
-          objectPosition={"top"}
           objectFit="cover"
           quality={100}
         />

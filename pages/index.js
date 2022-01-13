@@ -1,6 +1,7 @@
 import { fetchAPI } from "@/lib/api";
 import { BackgroundImage } from "@/components/BackgroundImage";
 import Button from "@/components/Button";
+import { Carousel } from "@/components/Carousel";
 
 export default function Home({ homepage, dogs }) {
   return (
@@ -19,7 +20,7 @@ export default function Home({ homepage, dogs }) {
         </div>
       </BackgroundImage>
       <div className="md:p-20 flex justify-center">
-        <div className="md:w-1/2 text-center w-full px-4 py-16">
+        <div className="md:w-1/2 text-center w-full px-4 py-8">
           <p className="text-3xl font-bold mb-2 text-gray-800">
             VI SOM ÄLSKAR OCH HJÄLPER HUNDAR
           </p>
@@ -40,6 +41,11 @@ export default function Home({ homepage, dogs }) {
             från någon av ägarna som har adapterad hund via oss!
           </p>
           <p className="text-2xl">TILSAMMANS KAN VI RÄDDA MÅNGA HUNDLIV!</p>
+        </div>
+      </div>
+      <div className="md:p-10 flex justify-center">
+        <div className="max-w-[1280px] m-auto w-full px-4 my-4">
+          <Carousel data={dogs} />
         </div>
       </div>
     </>
