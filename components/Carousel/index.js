@@ -7,10 +7,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import "./carousel.module.css";
+import Button from "../Button";
 
 export const Carousel = ({ data }) => {
-  console.log(data.data);
   return (
     <Swiper
       modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -48,8 +47,11 @@ export const Carousel = ({ data }) => {
               objectFit="cover"
               className=" -z-10 w-full"
             />
-            <div className="bg-white w-full p-2 justify-center flex bg-opacity-80">
+            <div className="bg-white w-full p-4 justify-center flex bg-opacity-60 flex-col items-center z-10">
               <p>{dog.attributes.Name}</p>
+              <Button path="/" color="" className="m-0 p-0">
+                Mer information
+              </Button>
             </div>
           </div>
         </SwiperSlide>

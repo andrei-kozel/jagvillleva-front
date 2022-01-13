@@ -43,8 +43,11 @@ export default function Home({ homepage, dogs }) {
           <p className="text-2xl">TILSAMMANS KAN VI RÄDDA MÅNGA HUNDLIV!</p>
         </div>
       </div>
-      <div className="md:p-10 flex justify-center">
-        <div className="max-w-[1280px] m-auto w-full px-4 my-4">
+      <div className="md:p-10 flex justify-center flex-col items-center bg-slate-100">
+        <h3 className="text-2xl font-thin m-10 mb-16 text-center">
+          Our friends who are looking for a house
+        </h3>
+        <div className="max-w-[1280px] m-auto w-full px-4 mb-10 ">
           <Carousel data={dogs} />
         </div>
       </div>
