@@ -10,7 +10,7 @@ export const BackgroundImage = ({ src, children }) => {
 
   return (
     <>
-      <div className="absolute -z-10 overflow-hidden w-screen h-screen xl:h-3/4">
+      <div className="absolute -z-10 overflow-hidden w-full h-screen xl:h-3/4">
         <Image
           alt="dog"
           src={

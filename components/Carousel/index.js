@@ -16,8 +16,9 @@ export const Carousel = ({ data }) => {
       navigation
       spaceBetween={50}
       onSwiper={(swiper) => console.log(swiper)}
-      centeredSlides={true}
+      removeClippedSubviews={false}
       centerInsufficientSlides={true}
+      itemID
       breakpoints={{
         320: {
           slidesPerView: 1,

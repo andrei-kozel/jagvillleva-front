@@ -44,7 +44,7 @@ export default function Home({ homepage, dogs }) {
         </div>
       </div>
       <div className="md:p-10 flex justify-center flex-col items-center bg-slate-100">
-        <h3 className="text-2xl font-thin m-10 mb-16 text-center">
+        <h3 className="text-2xl m-10 mb-16 text-center">
           Our friends who are looking for a house
         </h3>
         <div className="max-w-[1280px] m-auto w-full px-4 mb-10 ">
