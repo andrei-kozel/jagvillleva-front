@@ -6,15 +6,10 @@ export const Help = () => {
   return (
     <Container>
       <div className="flex justify-center items-center w-full flex-col md:flex-row">
-        <div className="w-1/2 relative">
-          <Image
-            src="/corgi-big.jpg"
-            alt="corgi dog"
-            width={500}
-            height={300}
-          />
+        <div className="w-full px-10 md:px-0 md:w-1/2 relative">
+          <Image src="/corgi-tr.png" alt="corgi dog" width={400} height={230} />
         </div>
-        <div className="w-full md:w-1/4 px-20 my-4 md:px-0 justify-center items-center flex flex-col text-center md:text-left">
+        <div className="w-full md:w-1/4 px-16 my-4 md:px-0 justify-center items-center flex flex-col text-center md:text-left">
           <p>
             Varje krona som ni kan skänka till hundarna är en chans till att
             förlänga deras liv.
