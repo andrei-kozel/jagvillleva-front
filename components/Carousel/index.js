@@ -15,10 +15,7 @@ export const Carousel = ({ data }) => {
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       navigation
       spaceBetween={50}
-      onSwiper={(swiper) => console.log(swiper)}
-      removeClippedSubviews={false}
       centerInsufficientSlides={true}
-      itemID
       breakpoints={{
         320: {
           slidesPerView: 1,
@@ -38,9 +35,8 @@ export const Carousel = ({ data }) => {
         <SwiperSlide
           key={dog.attributes.Slug}
           className="rounded-md overflow-hidden w-full"
-          onClick={() => console.log(dog)}
         >
-          <div className="w-full h-[400px] flex justify-center items-end">
+          <div className="w-full h-[400px] flex justify-center items-end relative">
             <Image
               src={dog.attributes.Images.data[0].attributes.url}
               alt={`Dog ${dog.attributes.Name}`}

@@ -2,6 +2,8 @@ import { fetchAPI } from "@/lib/api";
 import { BackgroundImage } from "@/components/BackgroundImage";
 import Button from "@/components/Button";
 import { Carousel } from "@/components/Carousel";
+import SmallInfoCard from "@/components/SmallInfoCard";
+import { Help } from "@/components/Help";
 
 export default function Home({ homepage, dogs }) {
   return (
@@ -44,12 +46,21 @@ export default function Home({ homepage, dogs }) {
         </div>
       </div>
       <div className="md:p-10 flex justify-center flex-col items-center bg-slate-100">
-        <h3 className="text-2xl m-10 mb-16 text-center">
+        <p className="text-2xl m-10 mb-16 text-center">
           Our friends who are looking for a house
-        </h3>
+        </p>
         <div className="max-w-[1280px] m-auto w-full px-4 mb-10 ">
           <Carousel data={dogs} />
         </div>
+      </div>
+      <div
+        style={{ backgroundColor: "#f0f0f0" }}
+        className="md:p-10 flex justify-center flex-col items-center"
+      >
+        <p className="text-2xl m-10 mb-16 text-center">
+          Than you can help our shelter
+        </p>
+        <Help />
       </div>
     </>
   );
