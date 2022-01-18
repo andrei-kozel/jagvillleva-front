@@ -2,18 +2,19 @@ import { fetchAPI } from "@/lib/api";
 import { BackgroundImage } from "@/components/BackgroundImage";
 import Button from "@/components/Button";
 import { Carousel } from "@/components/Carousel";
-import SmallInfoCard from "@/components/SmallInfoCard";
 import { Help } from "@/components/Help";
+import { Footer } from "@/components/Footer";
+import { AdoptionInfo } from "@/components/AdoptionInfo";
 
 export default function Home({ homepage, dogs }) {
   return (
     <>
       <BackgroundImage src={homepage.data.attributes}>
         <div className="flex flex-col justify-center items-center md:items-start h-screen md:h-fit ">
-          <h1 className="text-xl md:text-3xl font-bold text-gray-200">
+          <h1 className="text-xl md:text-3xl font-bold text-green-100 text-shadow-xl">
             TILLSAMMANS KAN
           </h1>
-          <h1 className="text-xl md:text-3xl font-bold text-gray-200 mb-4">
+          <h1 className="text-xl md:text-3xl font-bold text-green-100 mb-4 text-shadow-xl">
             VI RÄDDA MÅNGA HUNDLIV
           </h1>
           <Button path="/" color="">
@@ -21,7 +22,7 @@ export default function Home({ homepage, dogs }) {
           </Button>
         </div>
       </BackgroundImage>
-      <div className="md:p-20 flex justify-center">
+      <div className="p-8 md:p-20 flex justify-center">
         <div className="md:w-1/2 text-center w-full px-4 py-8">
           <p className="text-3xl font-bold mb-2 text-gray-800">
             VI SOM ÄLSKAR OCH HJÄLPER HUNDAR
@@ -45,7 +46,7 @@ export default function Home({ homepage, dogs }) {
           <p className="text-2xl">TILSAMMANS KAN VI RÄDDA MÅNGA HUNDLIV!</p>
         </div>
       </div>
-      <div className="md:p-10 flex justify-center flex-col items-center bg-slate-100">
+      <div className="py-10 md:py-20 flex justify-center flex-col items-center bg-slate-100">
         <p className="text-2xl m-10 mb-16 text-center">
           Our friends who are looking for a house
         </p>
@@ -53,14 +54,15 @@ export default function Home({ homepage, dogs }) {
           <Carousel data={dogs} />
         </div>
       </div>
-      <div
-        style={{ backgroundColor: "#f0f0f0" }}
-        className="md:p-10 flex justify-center flex-col items-center"
-      >
-        <p className="text-2xl m-10 mb-16 text-center">
-          Than you can help our shelter
-        </p>
+      <div className="bg-gray-500 p-8 py-20 md:px-16 md:py-24 ">
+        <AdoptionInfo />
+      </div>
+      <div className="flex justify-center pt-20 flex-col items-center">
         <Help />
+      </div>
+
+      <div className="bg-stone-800 p-8">
+        <Footer />
       </div>
     </>
   );

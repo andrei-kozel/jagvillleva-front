@@ -5,9 +5,9 @@ import { Container } from "../Container";
 export const Help = () => {
   return (
     <Container>
-      <div className="flex justify-center items-center w-full flex-col md:flex-row">
-        <div className="w-full px-10 md:px-0 md:w-1/2 relative">
-          <Image src="/corgi-tr.png" alt="corgi dog" width={400} height={230} />
+      <div className="flex justify-center items-center w-full flex-col-reverse md:flex-row">
+        <div className="w-full pt-10 md:px-0 md:w-2/4 justify-center items-center flex">
+          <Image src="/dog-help.jpg" alt="corgi dog" width={300} height={400} />
         </div>
         <div className="w-full md:w-1/4 px-16 my-4 md:px-0 justify-center md:justify-start items-center md:items-start flex flex-col text-center md:text-left">
           <p>

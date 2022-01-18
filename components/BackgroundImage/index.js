@@ -21,7 +21,8 @@ export const BackgroundImage = ({ src, children }) => {
             }
             layout="fill"
             objectFit="cover"
-            quality={100}
+            objectPosition="top"
+            quality={75}
             priority
           />
         </div>
