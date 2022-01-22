@@ -1,6 +1,7 @@
 /*  ./components/Navbar.jsx     */
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export const Navigation = ({ logo }) => {
   const [active, setActive] = useState(false);
@@ -105,6 +106,40 @@ export const Navigation = ({ logo }) => {
                   Blogg
                 </a>
               </Link>
+              <div className="flex flex-row justify-center items-center px-3 py-2 md:px-0 md:py-0">
+                <Link
+                  href="https://www.facebook.com/groups/179711222611075/"
+                  passHref
+                >
+                  <a
+                    className="m-1 cursor-pointer hover:scale-105 transition ease-in-out"
+                    target="_blank"
+                  >
+                    <Image
+                      src="/socials/facebook.png"
+                      width={30}
+                      height={30}
+                      alt="facebook icon"
+                    />
+                  </a>
+                </Link>
+                <Link
+                  href="https://www.instagram.com/jagvilllevahund/?hl=ru"
+                  passHref
+                >
+                  <a
+                    className="m-1 cursor-pointer hover:scale-105 transition ease-in-out"
+                    target="_blank"
+                  >
+                    <Image
+                      src="/socials/instagram.png"
+                      width={30}
+                      height={30}
+                      alt="facebook icon"
+                    />
+                  </a>
+                </Link>
+              </div>
             </div>
           </div>
         </nav>

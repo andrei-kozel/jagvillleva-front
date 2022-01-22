@@ -61,9 +61,7 @@ export default function Home({ homepage, dogs }) {
         <Help />
       </div>
 
-      <div className="bg-stone-800 p-8">
-        <Footer />
-      </div>
+      <Footer />
     </>
   );
 }

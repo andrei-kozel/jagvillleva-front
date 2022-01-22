@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { Container } from "@/components/Container";
 import { AboutCard } from "@/components/AboutCard";
+import { Footer } from "@/components/Footer";
 
 export default function About({}) {
   return (
@@ -17,11 +18,13 @@ export default function About({}) {
         />
       </div>
       <Container>
-        <div className="flex flex-col-reverse md:flex-row">
-          <div className="w-11/12 md:w-3/5 m-auto my-10 text-center justify-center items-center flex font-bold">
-            <p className="text-3xl">Varför vi hjälper hundar från Ryssland?</p>
+        <div className="flex flex-col-reverse md:flex-row md:mb-10">
+          <div className="w-11/12 md:w-5/12 m-auto my-10 text-center justify-center items-center flex font-bold">
+            <p className="text-3xl self-end">
+              Varför vi hjälper hundar från Ryssland?
+            </p>
           </div>
-          <div className="w-11/12 md:w-2/5 bg-slate-100 p-6 md:p-10 -mt-20 m-auto  md:-mt-40">
+          <div className="w-11/12 md:w-7/12 bg-slate-100 p-6 md:p-10 -mt-20 m-auto  md:-mt-60 mb-10">
             <p className="text-3xl uppercase font-bold text-center mb-4">
               Om Oss
             </p>
@@ -59,7 +62,7 @@ export default function About({}) {
           </div>
         </div>
 
-        <div className="my-20 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 md:gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 md:gap-4">
           <AboutCard
             src="/about/1.jpg"
             title="HOPPLÖSHET"
@@ -99,6 +102,7 @@ export default function About({}) {
           />
         </div>
       </Container>
+      <Footer />
     </>
   );
 }
