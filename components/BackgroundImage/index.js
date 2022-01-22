@@ -10,7 +10,7 @@ export const BackgroundImage = ({ src, children }) => {
 
   return (
     <>
-      <div className="absolute -z-10 overflow-hidden w-full h-screen xl:h-3/4">
+      <div className="absolute -z-10 overflow-hidden w-full h-screen xl:h-5/6">
         <div className="relative w-full h-full">
           <Image
             alt="dog"
@@ -27,7 +27,7 @@ export const BackgroundImage = ({ src, children }) => {
           />
         </div>
       </div>
-      <div className="flex h-screen xl:h-3/4 justify-center text-center xl:text-right md:justify-center xl:justify-start items-center max-w-[1280px] m-auto">
+      <div className="flex h-screen md:h-5/6 justify-center text-center md:justify-center xl:justify-end items-center max-w-[1280px] m-auto">
         {children}
       </div>
     </>

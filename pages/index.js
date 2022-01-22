@@ -10,11 +10,11 @@ export default function Home({ homepage, dogs }) {
   return (
     <>
       <BackgroundImage src={homepage.data.attributes}>
-        <div className="flex flex-col justify-center items-center md:items-start h-screen md:h-fit ">
-          <h1 className="text-xl md:text-3xl font-bold text-green-100 text-shadow-xl">
+        <div className="flex flex-col justify-center items-center xl:items-end h-screen md:h-fit ">
+          <h1 className="text-xl md:text-3xl font-bold text-white text-shadow-xl">
             TILLSAMMANS KAN
           </h1>
-          <h1 className="text-xl md:text-3xl font-bold text-green-100 mb-4 text-shadow-xl">
+          <h1 className="text-xl md:text-3xl font-bold text-white mb-4 text-shadow-xl">
             VI RÄDDA MÅNGA HUNDLIV
           </h1>
           <Button path="/" color="">

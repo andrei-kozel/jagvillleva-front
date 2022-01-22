@@ -10,7 +10,7 @@ export const Navigation = ({ logo }) => {
   };
 
   return (
-    <div className={`fixed w-screen p-3 z-50 bg-white shadow-md`}>
+    <div className={`fixed w-screen py-3 z-50 bg-white shadow-md`}>
       <div className="max-w-[1280px] m-auto">
         <nav className="flex items-center flex-wrap">
           <Link href="/">
