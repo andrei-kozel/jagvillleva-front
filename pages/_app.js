@@ -4,6 +4,7 @@ import { fetchAPI } from "@/lib/api";
 import App from "next/app";
 import Head from "next/head";
 import { Navigation } from "@/components/Navigation";
+import { Footer } from "@/components/Footer";
 
 export const GlobalContext = createContext({});
 
@@ -23,6 +24,7 @@ function MyApp({ Component, pageProps }) {
       <GlobalContext.Provider value={global}>
         <Component {...pageProps} />
       </GlobalContext.Provider>
+      <Footer />
     </>
   );
 }

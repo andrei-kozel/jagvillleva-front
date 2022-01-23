@@ -102,7 +102,6 @@ export default function About({}) {
           />
         </div>
       </Container>
-      <Footer />
     </>
   );
 }

@@ -3,7 +3,6 @@ import { BackgroundImage } from "@/components/BackgroundImage";
 import Button from "@/components/Button";
 import { Carousel } from "@/components/Carousel";
 import { Help } from "@/components/Help";
-import { Footer } from "@/components/Footer";
 import { AdoptionInfo } from "@/components/AdoptionInfo";
 
 export default function Home({ homepage, dogs }) {
@@ -60,8 +59,6 @@ export default function Home({ homepage, dogs }) {
       <div className="flex justify-center pt-20 flex-col items-center">
         <Help />
       </div>
-
-      <Footer />
     </>
   );
 }
