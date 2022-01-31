@@ -1,13 +1,13 @@
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
-import Image from "next/image";
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import Image from 'next/image'
 
 // Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
-import Button from "../Button";
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+import 'swiper/css/scrollbar'
+import Button from '../Button'
 
 export const Carousel = ({ data }) => {
   return (
@@ -19,23 +19,21 @@ export const Carousel = ({ data }) => {
       breakpoints={{
         320: {
           slidesPerView: 1,
-          spaceBetween: 0,
+          spaceBetween: 0
         },
         640: {
           spaceBetween: 50,
-          slidesPerView: 2,
+          slidesPerView: 2
         },
         860: {
           spaceBetween: 50,
-          slidesPerView: 3,
-        },
-      }}
-    >
+          slidesPerView: 3
+        }
+      }}>
       {data.data.map((dog) => (
         <SwiperSlide
           key={dog.attributes.Slug}
-          className="rounded-md overflow-hidden w-full"
-        >
+          className="rounded-md overflow-hidden w-full">
           <div className="w-full h-[400px] flex justify-center items-end relative">
             <Image
               src={dog.attributes.Images.data[0].attributes.url}
@@ -46,7 +44,11 @@ export const Carousel = ({ data }) => {
             />
             <div className="bg-white w-full p-4 justify-center flex bg-opacity-60 flex-col items-center z-10">
               <p>{dog.attributes.Name}</p>
-              <Button path="/" color="" className="m-0 p-0">
+              <Button
+                path={`/dog/${dog.attributes.Slug}`}
+                color=""
+                className="m-0 p-0"
+                dog={dog}>
                 Mer information
               </Button>
             </div>
@@ -54,5 +56,5 @@ export const Carousel = ({ data }) => {
         </SwiperSlide>
       ))}
     </Swiper>
-  );
-};
+  )
+}

@@ -1,7 +1,7 @@
-import React from "react";
-import Image from "next/image";
-import { Accordion } from "@/components/Accordion";
-import { Container } from "@/components/Container";
+import React from 'react'
+import Image from 'next/image'
+import { Accordion } from '@/components/Accordion'
+import { Container } from '@/components/Container'
 
 export default function Rules() {
   return (
@@ -21,5 +21,5 @@ export default function Rules() {
         <Accordion />
       </Container>
     </>
-  );
+  )
 }
