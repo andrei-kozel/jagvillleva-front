@@ -45,7 +45,7 @@ export const Carousel = ({ data }) => {
             <div className="bg-white w-full p-4 justify-center flex bg-opacity-60 flex-col items-center z-10">
               <p>{dog.attributes.Name}</p>
               <Button
-                path={`/dog/${dog.attributes.Slug}`}
+                path={`/dogs/${dog.attributes.Slug}`}
                 color=""
                 className="m-0 p-0"
                 dog={dog}>
