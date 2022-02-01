@@ -6,19 +6,8 @@ import { Container } from '@/components/Container'
 export default function Rules() {
   return (
     <>
-      <div className="h-3/5 md:h-2/3 w-full relative -z-10">
-        <Image
-          alt="dog"
-          src="/bgimage.jpg"
-          layout="fill"
-          objectFit="cover"
-          quality={100}
-          priority
-        />
-      </div>
-
       <Container>
-        <div className="w-full md:w-3/4 m-auto my-8 text-gray-700 px-4">
+        <div className="w-full md:w-3/4 m-auto mb-8 text-gray-700 px-4 pt-24">
           <p className="text-2xl font-bold mb-4">Vanliga frågor</p>
           <p>
             Bläddra i listan nedan för att se en stor mängd information som konsumenter
